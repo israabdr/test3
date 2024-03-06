@@ -3,7 +3,12 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
-data = pd.read_csv("your_data.csv")
+data1 = {
+    'age': [25, 30, 35, 40, 45],
+    'income': [50000, 60000, 70000, 80000, 90000],
+    'target_column': [0, 1, 0, 1, 0]
+}
+data = pd.DataFrame(data1)   
 
 X = data.drop('target_column', axis=1)
 print(X)
